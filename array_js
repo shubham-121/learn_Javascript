@@ -1,0 +1,35 @@
+let arr=[10,20,30,40,50]
+console.log(arr.length);
+
+let a=arr.pop();
+console.log(arr,a) //pop returns and deletes the last elemnt of the array
+
+arr.push(100);//adds elemt to the last of the array
+
+let c=arr.join("_")// elemts are joined using this seperator
+console.log(c)
+
+let d=arr.shift(); //removes first element
+console.log(arr,d)
+
+let arr2=[90,80,70,60]
+let arr3=arr.concat(arr2)   //original arryas remain unaffected. new array is formed
+console.log(arr3)
+
+
+console.log(arr3.sort()); //modifies original arrays. sorts arryas alphabetically
+
+let compare=(a,b)=>{              /* sorts the arrays in ascending order. Comapre is a func which is passed  in                                 in the sort function */
+    return a-b
+}
+console.log(arr3.sort(compare));
+
+let compare1=(a,b)=>{
+    return b-a;                         // sorts array in descending order
+}
+console.log(arr3.sort(compare1))
+
+
+console.log(arr3)
+arr3.splice(1,2,999,999,999)
+console.log(arr3)
