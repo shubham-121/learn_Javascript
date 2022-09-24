@@ -1,0 +1,36 @@
+let array=[20,30,40,50]
+array.foreach((element)=>{
+  console.log(element*element)
+
+
+  
+//from each loop
+let name='SHUBHAM'
+let arr=Array.from(name) // from each loop in js
+console.log(arr)
+
+
+  //for of loop
+let arr2=[10,20,30,50]  //similar to for loop. it is 
+                        // smaller version of for loop
+for(let i of arr2){
+  console.log(i)
+}
+
+
+  //for in loop
+let arr4=[10,20,30,50]
+for(let i in arr4){         
+  console.log(i)          //prints the object key
+  console.log(arr4[i])    //prints the object value
+}
+
+
+
+let varr=[13,26,39,52,65,78,91] 
+varr.map((value)=>{
+  console.log(value)
+})
+  console.log(varr)
+
+      
