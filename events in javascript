@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="head red dead" id="heading"> Welcome to the javascript course</h1>
+        <div id="myfirst" class="child red good" id="first">child 1
+
+            <ul class="this">
+                <li class="childul">this</li>
+                <li class="childul">is</li>
+                <li class="childul">a</li>
+                <li class="childul">list </li>
+                <li class="childul">of my dreams</li>
+            </ul>
+        </div>
+        <div class="child">child 2</div>
+        <div class="child red">child 3</div>
+        <div class="child">child 4</div>
+        <form action="none.html" method="post">
+            <a href="//codewithharry.com">Go to Code With Harry</a>
+            <br>
+            <br>
+            Search this website: <input type="text" name="Hello" id="">
+            <input type="submit" value="submit" id="btn">
+        </form>
+    </div>
+    <br>
+    <div class="no">this is a dummy div1</div>
+    <div class="no">this is a dummy div2</div>
+    <div class="no">this is a dummy div3</div>
+</body>
+
+ <script src="event.js"></script>
+<script src="event1.js"></script>
+</html>
+<h1></h1>
+
+......................................................................................
+
+//script 1
+
+console.log("hi")
+
+document.getElementById("heading").addEventListener("click",function(e){
+    console.log("you have clicked the heading")
+    //location.href="//Amazon.in"
+    let variable=e.target
+    
+    //variable=Array.from(e.target.classList)
+    console.log(variable)
+
+    let x=e.target.className
+    console.log(x)
+
+    let y=e.target.classList  //makes a list if you have multiple classes assigned to an element
+    console.log(y)
+    console.log(Array.from(y))
+
+    let a=e.offsetX   //tells position of mouse relative to x-plane 
+    console.log(a)
+    let b=e.clientX
+    console.log(b)
+})
+
+//script 2
+
+console.log(" YO!")
+
+let btn=document.getElementById("btn")
+btn.addEventListener("click", func1)
+btn.addEventListener("dblclick", func2)
+function func1(e){
+    console.log("submit button clicked")
+    e.preventDefault();
+
+}
+
+function func2(e){
+    console.log("double clicked")
+    //e.preventDefault();
+}
+
+
+document.querySelector(".no").addEventListener("mouseenter",function(){
+    console.log("mouse entered")
+})
+
+document.querySelector(".no").addEventListener("mouseleave",function(){
+    console.log("mouse left")
+})
+
+
+document.querySelector(".container").addEventListener("mousemove", function(e){
+
+    console.log("mouse movement detected")
+    console.log(e.offsetX,e.offsetY);
+    document.body.style.backgroundColor=`rgb(${e.offsetX},${e.offsetY},${e.offsetX})`;
+})
