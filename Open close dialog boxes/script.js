@@ -36,3 +36,9 @@ overlay.addEventListener('click', closeModal);
 //   modal.classList.add('hidden');
 //   overlay.classList.add('hidden');
 // });
+document.addEventListener('keydown', event => {        //close the modal window on a key press from the keyboard
+  console.log(event.key);
+  if (event.key === 'Escape') {
+    if (!modal.classList.contains('hidden')) closeModal();
+  }
+});
