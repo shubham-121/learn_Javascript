@@ -34,7 +34,7 @@ this is because when JavaScript executed this code it searched for car property 
 
 
 
-
+IN A NUTSHELL:
 prototype-> prototype property is created when a function is declared.Person.prototype property is created internally once you declare above function.
   Many properties can be added to the Person.prototype which are shared by Person instances created using new Person().
 
