@@ -16,15 +16,16 @@ const Student = function (firstName, birthYear, course) {
   this.course = course;
 };
 
-#//linking the prototype manually
+//linking the prototype manually
 Student.prototype = Object.create(Person.prototype); //student.prototype inherits from person.prototype
-#
+
 
 Student.prototype.introduce = function () {
   console.log(`My name is ${this.firstName} and I studey in ${this.course}`);
 };
 
 const mike = new Student('Mike', 2020, 'Computer Science');
+Student.prototype.constructor = Student;
 mike.introduce();
 mike.calcAge();
 
