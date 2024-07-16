@@ -83,4 +83,27 @@ Promise.any([
   .then(res => console.log(res))
   .catch(err => console.log(err));
 
+//Remember -> async func always returns a promise.
+// When used with map method, it return an array of promises,
+//  which can be resolved using Promise.all() method on the array
+
+//Example below 
+
+// const loadAll = async function (imgArr) {
+//   try {
+//     const imgs = imgArr.map(async img => await createImage(img)); //async func always returns a promise
+
+//     console.log(imgs);
+//     const imgsEl = await Promise.all(imgs);
+//     console.log(imgsEl);
+
+//     imgsEl.forEach(img => img.classList.add('parallel'));
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
+
+// loadAll(['image1.jpg', 'image1.jpg', 'image1.jpg']);
+
+
 
